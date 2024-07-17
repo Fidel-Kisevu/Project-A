@@ -1,0 +1,313 @@
+
+
+
+    /* Media query for mobile devices */
+    @media (max-width: 767px) {
+      .content {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+      }
+      .sidebar {
+      
+        display: none; /* Initially hidden */
+    }
+    
+    .content {
+        width: 100% !important;
+        margin-left: 0 !important; 
+    }
+    .content-full{
+      width: 100%;
+      margin-left: 0;
+    }
+    .footer{
+      margin-left: -5px !important;
+      margin-right: -5px !important;
+   
+    }
+    .container-icons{
+      display: none !important;
+    }
+    .navbar-brand{
+      display: none;
+    }
+    .humbergermenu{
+      display: flex !important;
+      font-size: 1.5rem;
+     
+
+    }
+    .bi-list{
+      font-size: 2rem !important;
+      padding-right: 10px;
+    }
+    .sidebar.show {
+      display: block;
+  }
+  .sidebar.open { 
+    transform: translateX(0);
+    opacity: 1;
+}  
+
+      .bi-chevron-double-down{
+        display: none;
+      }.bi-chevron-double-down{
+        display: none;
+      }
+    }
+        
+  
+:root {
+    --primary:#1f242b; /* Custom secondary color */
+    --secondary:#2d353f; /* Custom primary color */
+    --tertiary:#dfe4b3;
+    --heading-color:#E79B07; /* Custom color for headings */
+    --paragraph-color: #ffffff; /* Custom color for paragraphs */
+}
+
+.background-section {
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left:0 ;
+    z-index: -9;
+
+    }
+    
+    .background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 43, 51, 0.9); /* Adjust the color and opacity */
+    z-index: -8;
+  }
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+.bg-tertiary{
+    background-color:var(--tertiary)  !important;
+}
+
+.text-primary {
+    color: var(--paragraph-color) !important;
+}
+
+.text-secondary {
+    color: var(--heading-color) !important;
+}
+.btn-primary{
+    background-color:var(--secondary);
+}
+
+
+
+
+/*Navigation bar styles*/
+
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    margin-top: 0;
+    position: fixed;
+    box-shadow: 0 4px 8px rgb(231, 155, 7, 0.5);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+
+.nav-item {
+    margin-right: 15px;
+}
+.navbar-brand{    
+    font-family: "MagistralTT-Bold";
+    font-size: 36px;
+}
+/*Animation and hover effeccts*/
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#E79B07; /* Blue color */
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .nav-link:hover {
+    animation: moveLeftBack 0.6s ease forwards;
+  }
+
+  @keyframes moveLeftBack {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+
+.sidebar {
+    top: 100px;
+    width: 250px;
+    transition: margin 0.7s ease;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+ 
+}
+
+.sidebar-hidden {
+    margin-left: -250px;
+}
+hr.custom-hr {
+      border: none;
+      height: 1px; /* Adjust height as needed */
+      background-color: #E79B07;
+    }
+
+
+
+.content {
+
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    transition: all 0.7s ease;
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.content-full {
+    width: 100%;
+    margin-left: 0;
+}
+.content-expanded {
+    margin-left: 0;
+}
+/*icons styles*/
+.bi-chevron-double-left {
+    font-size: 1.5em; /* Adjust the size */
+    color: #ffffff; /* Adjust the color */
+}
+.bi-chevron-double-down{
+    font-size: 1.5em; /* Adjust the size */
+    color: #ffffff; /* Adjust the color */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Animation effect */
+   
+  
+}
+.hidden{
+    display: none;
+   
+}
+
+
+
+    .mission-card {
+
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+    }
+    .mission-card h1 {
+      font-size: 2.5rem;
+    }
+    .mission-card p {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+
+    /*Main-section for Cards and sermons*/
+    
+    
+  
+    .btn:hover{
+        background-color: #E79B07;
+        color: #1f242b;
+        transition: all 0.3s ease;
+    }
+   
+    .card:hover {
+        transform: translateY(-10px );
+        transition: all 0.6s ease;
+    }
+
+    
+/*footer*/
+
+.icon-container a:hover {
+  color: #E79B07 !important;
+  transition: all 0.3s ease;
+
+}
+.nav-links a {
+  font-size: 1rem; /* Adjust font size if needed */
+  text-decoration: none; /* Remove underline from links */
+  margin-right: 20px;
+
+}
+.nav-links a:hover {
+color: #E79B07 !important;
+}
+
+
+
+
+.icon-box {
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.bi{
+  font-size: 1.5rem;
+}
+
+.bi:hover  {
+  color: #E79B07 !important;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.container-icons{
+  display: flex;
+  flex: 1;
+  justify-content:right;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+
+}
+
+
